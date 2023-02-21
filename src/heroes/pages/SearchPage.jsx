@@ -38,7 +38,7 @@ export const SearchPage = () => {
                     <h4>Searching</h4>
                     <hr />
 
-                    <form onSubmit={ onSearchSubmit } >
+                    <form aria-label='form' onSubmit={ onSearchSubmit } >
                         <input  autoComplete="off" 
                                 className="form-control"
                                 name="searchText"
@@ -64,12 +64,14 @@ export const SearchPage = () => {
                     } */}
                     
                     {/* Segunda Forma */}
-                    <div className="alert alert-primary animate__animated animate__fadeIn" 
+                    <div aria-label='search'
+                         className="alert alert-primary animate__animated animate__fadeIn" 
                          style={{ display: showSearch ? '' : 'none' }}>
                         Search a hero
                     </div>
 
-                    <div className="alert alert-danger animate__animated animate__shakeX" 
+                    <div aria-label='search-error'
+                         className="alert alert-danger animate__animated animate__shakeX" 
                          style={{ display: showError ? '' : 'none' }}>
                         No here with <b>{ q }</b>
                     </div>
